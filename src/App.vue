@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BicycleRentalShop></BicycleRentalShop>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BicycleRentalShop from './components/BicycleRentalShop.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BicycleRentalShop
   }
 }
 </script>
@@ -24,5 +23,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  cursor: default;
+}
+
+button {
+  background-color: #C8D7DA;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.5;
+  cursor: pointer;
+  margin: 3px;
+  box-shadow: 1px 2px 2px 1px #cccccc;
+}
+
+button.disabled, button:disabled {
+  background-color: #D3D3D3;
 }
 </style>
