@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Total Income</h2>
-    <p>{{ $store.state.price }} x {{ $store.state.increment }} = {{ $store.getters.TotalIncome }}</p>
+    <p>{{ $store.state.mainFunc.price }} x {{ $store.state.mainFunc.increment }} = {{ $store.getters.TotalIncome }}</p>
     <button v-on:click="$store.dispatch('resetAsync')">Reset All</button>
   </div>
 </template>
