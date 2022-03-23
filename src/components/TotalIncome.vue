@@ -2,7 +2,7 @@
   <div>
     <h2>Total Income</h2>
     <p>{{ $store.state.price }} x {{ $store.state.increment }} = {{ $store.getters.TotalIncome }}</p>
-    <button v-on:click="$store.commit('reset')">Reset All</button>
+    <button v-on:click="$store.dispatch('resetAsync')">Reset All</button>
   </div>
 </template>
 

@@ -14,6 +14,7 @@
     </ol>
     <hr>
     <TotalIncome></TotalIncome>
+    <p>Current Time: {{ timestamp }}</p>
   </div>
 </template>
 
@@ -29,8 +30,20 @@ export default {
     return {
       textdanger: '#C21414',
       textsuccess: '#B5B35D',
+      timestamp: '',
     }
   },
+  created() {
+    setInterval(this.getNow, 1000);
+  },
+  methods: {
+    getNow() {
+      let today = new Date();
+      let date = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+      let time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+      this.timestamp = `${date} ${time}`;
+    }
+  }
 }
 </script>
 

@@ -40,6 +40,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    resetAsync(context) {
+      setTimeout(() => {
+        context.commit('reset');
+      }, 3000);
+    }
   },
   modules: {
   }
